@@ -1,0 +1,421 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "Django_for_tour.asgi",
+        "description": "Django_for_tour.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "Django_for_tour.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "Django_for_tour.settings",
+        "description": "Django_for_tour.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = \"django-insecure-$!(a0mz4eoy^qyu3ts)=9e50q5kisw2!g)z733@5mi&!1uyx_*\"\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [ ",
+        "detail": "Django_for_tour.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "Django_for_tour.settings",
+        "description": "Django_for_tour.settings",
+        "peekOfCode": "SECRET_KEY = \"django-insecure-$!(a0mz4eoy^qyu3ts)=9e50q5kisw2!g)z733@5mi&!1uyx_*\"\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [ \n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",",
+        "detail": "Django_for_tour.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "Django_for_tour.settings",
+        "description": "Django_for_tour.settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [ \n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",",
+        "detail": "Django_for_tour.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "Django_for_tour.settings",
+        "description": "Django_for_tour.settings",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [ \n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"tour_management\"",
+        "detail": "Django_for_tour.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "Django_for_tour.settings",
+        "description": "Django_for_tour.settings",
+        "peekOfCode": "INSTALLED_APPS = [ \n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"tour_management\"\n]\nMIDDLEWARE = [",
+        "detail": "Django_for_tour.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "Django_for_tour.settings",
+        "description": "Django_for_tour.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    \"django.middleware.security.SecurityMiddleware\",\n    \"django.contrib.sessions.middleware.SessionMiddleware\",\n    \"django.middleware.common.CommonMiddleware\",\n    \"django.middleware.csrf.CsrfViewMiddleware\",\n    \"django.contrib.auth.middleware.AuthenticationMiddleware\",\n    \"django.contrib.messages.middleware.MessageMiddleware\",\n    \"django.middleware.clickjacking.XFrameOptionsMiddleware\",\n]\nROOT_URLCONF = \"Django_for_tour.urls\"",
+        "detail": "Django_for_tour.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "Django_for_tour.settings",
+        "description": "Django_for_tour.settings",
+        "peekOfCode": "ROOT_URLCONF = \"Django_for_tour.urls\"\nTEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",",
+        "detail": "Django_for_tour.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "Django_for_tour.settings",
+        "description": "Django_for_tour.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",\n                \"django.contrib.auth.context_processors.auth\",",
+        "detail": "Django_for_tour.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "Django_for_tour.settings",
+        "description": "Django_for_tour.settings",
+        "peekOfCode": "WSGI_APPLICATION = \"Django_for_tour.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/5.0/ref/settings/#databases\nDATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": BASE_DIR / \"db.sqlite3\",\n    }\n}\n# Password validation",
+        "detail": "Django_for_tour.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "Django_for_tour.settings",
+        "description": "Django_for_tour.settings",
+        "peekOfCode": "DATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": BASE_DIR / \"db.sqlite3\",\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "detail": "Django_for_tour.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "Django_for_tour.settings",
+        "description": "Django_for_tour.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.UserAttributeSimilarityValidator\",\n    },\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.MinimumLengthValidator\",\n    },\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.CommonPasswordValidator\",\n    },",
+        "detail": "Django_for_tour.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "Django_for_tour.settings",
+        "description": "Django_for_tour.settings",
+        "peekOfCode": "LANGUAGE_CODE = \"en-us\"\nTIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "detail": "Django_for_tour.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "Django_for_tour.settings",
+        "description": "Django_for_tour.settings",
+        "peekOfCode": "TIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "detail": "Django_for_tour.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "Django_for_tour.settings",
+        "description": "Django_for_tour.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "detail": "Django_for_tour.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "Django_for_tour.settings",
+        "description": "Django_for_tour.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "detail": "Django_for_tour.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "Django_for_tour.settings",
+        "description": "Django_for_tour.settings",
+        "peekOfCode": "STATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "detail": "Django_for_tour.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "Django_for_tour.settings",
+        "description": "Django_for_tour.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "detail": "Django_for_tour.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "Django_for_tour.urls",
+        "description": "Django_for_tour.urls",
+        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"tour_api/\", include(\"tour_management.urls\"))\n]",
+        "detail": "Django_for_tour.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "Django_for_tour.wsgi",
+        "description": "Django_for_tour.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "Django_for_tour.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "TourManagementConfig",
+        "kind": 6,
+        "importPath": "tour_management.apps",
+        "description": "tour_management.apps",
+        "peekOfCode": "class TourManagementConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"tour_management\"",
+        "detail": "tour_management.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Booking",
+        "kind": 6,
+        "importPath": "tour_management.models",
+        "description": "tour_management.models",
+        "peekOfCode": "class Booking(models.Model):\n    customer_name = models.CharField(max_length=20)\n    customer_last_name = models.CharField(max_length=20)\n    contact_information = models.JSONField()\n    time = models.DateTimeField()\n    payer = models.CharField(\n        max_length=15,\n        choices=[(\"direct_client\", \"Direct Client\"), (\"agency\", \"Agency\")],\n    )\n    number_of_guests = models.IntegerField()",
+        "detail": "tour_management.models",
+        "documentation": {}
+    },
+    {
+        "label": "Customer",
+        "kind": 6,
+        "importPath": "tour_management.models",
+        "description": "tour_management.models",
+        "peekOfCode": "class Customer(models.Model):\n    name = models.CharField(max_length=255)\n    contact_information = models.JSONField()\n    travel_preferences = models.JSONField()\n    travel_history = models.TextField()\n    preferred_language = models.CharField(max_length=255)\nclass Supplier(models.Model):\n    name = models.CharField(max_length=255)\n    contact_person_name = models.CharField(max_length=255)\n    contact_person_last_name = models.CharField(max_length=255)",
+        "detail": "tour_management.models",
+        "documentation": {}
+    },
+    {
+        "label": "Supplier",
+        "kind": 6,
+        "importPath": "tour_management.models",
+        "description": "tour_management.models",
+        "peekOfCode": "class Supplier(models.Model):\n    name = models.CharField(max_length=255)\n    contact_person_name = models.CharField(max_length=255)\n    contact_person_last_name = models.CharField(max_length=255)\n    email_address = models.EmailField()\n    contact_information = models.JSONField()\n    preferred_languages = models.CharField(max_length=255)\nclass TourPackage(models.Model):\n    tour_name = models.CharField(max_length=255)\n    description = models.TextField()",
+        "detail": "tour_management.models",
+        "documentation": {}
+    },
+    {
+        "label": "TourPackage",
+        "kind": 6,
+        "importPath": "tour_management.models",
+        "description": "tour_management.models",
+        "peekOfCode": "class TourPackage(models.Model):\n    tour_name = models.CharField(max_length=255)\n    description = models.TextField()\n    itinerary = models.TextField()\n    duration = models.IntegerField()\n    included = models.TextField()\n    excluded = models.TextField()\n    remarks = models.TextField()\n    pricing = models.JSONField()  # Pricing structure based on tour package and season\n    supplier = models.ForeignKey(\"Supplier\", on_delete=models.CASCADE)",
+        "detail": "tour_management.models",
+        "documentation": {}
+    },
+    {
+        "label": "Season",
+        "kind": 6,
+        "importPath": "tour_management.models",
+        "description": "tour_management.models",
+        "peekOfCode": "class Season(models.Model):\n    season_name = models.CharField(max_length=255)\n    start_date = models.DateField()\n    end_date = models.DateField()\nclass TourPackagePricing(models.Model):\n    tour_package = models.ForeignKey(\"TourPackage\", on_delete=models.CASCADE)\n    season = models.ForeignKey(\"Season\", on_delete=models.CASCADE)\n    price_tier = models.CharField(max_length=255)\n    price = models.DecimalField(max_digits=10, decimal_places=2)\n    profit_margin_type = models.CharField(max_length=255)  # Percentage or fixed amount",
+        "detail": "tour_management.models",
+        "documentation": {}
+    },
+    {
+        "label": "TourPackagePricing",
+        "kind": 6,
+        "importPath": "tour_management.models",
+        "description": "tour_management.models",
+        "peekOfCode": "class TourPackagePricing(models.Model):\n    tour_package = models.ForeignKey(\"TourPackage\", on_delete=models.CASCADE)\n    season = models.ForeignKey(\"Season\", on_delete=models.CASCADE)\n    price_tier = models.CharField(max_length=255)\n    price = models.DecimalField(max_digits=10, decimal_places=2)\n    profit_margin_type = models.CharField(max_length=255)  # Percentage or fixed amount\n    profit_margin_value = models.DecimalField(max_digits=10, decimal_places=2)\nclass Tour(models.Model):\n    tour_name = models.CharField(max_length=50)\n    description = models.CharField()",
+        "detail": "tour_management.models",
+        "documentation": {}
+    },
+    {
+        "label": "Tour",
+        "kind": 6,
+        "importPath": "tour_management.models",
+        "description": "tour_management.models",
+        "peekOfCode": "class Tour(models.Model):\n    tour_name = models.CharField(max_length=50)\n    description = models.CharField()\n    itinerary = models.CharField()",
+        "detail": "tour_management.models",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "tour_management.urls",
+        "description": "tour_management.urls",
+        "peekOfCode": "urlpatterns = [\n    path(\"\", views.index, name=\"index\")\n]",
+        "detail": "tour_management.urls",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "tour_management.views",
+        "description": "tour_management.views",
+        "peekOfCode": "def index(request):\n    return HttpResponse(\"Hello! Welcome! Hello world!\")\ndef booking(request):\n    if request.method == \"POST\":\n        # Extract supplier ID from form data\n        supplier_id = request.POST[\"supplier\"]\n        # Get the selected supplier\n        supplier = Supplier.objects.get(pk=supplier_id)\n        # Get tours for the selected supplier\n        tours = Tour.objects.filter(supplier=supplier)",
+        "detail": "tour_management.views",
+        "documentation": {}
+    },
+    {
+        "label": "booking",
+        "kind": 2,
+        "importPath": "tour_management.views",
+        "description": "tour_management.views",
+        "peekOfCode": "def booking(request):\n    if request.method == \"POST\":\n        # Extract supplier ID from form data\n        supplier_id = request.POST[\"supplier\"]\n        # Get the selected supplier\n        supplier = Supplier.objects.get(pk=supplier_id)\n        # Get tours for the selected supplier\n        tours = Tour.objects.filter(supplier=supplier)\n        # Filter tours based on booking date\n        booking_date = datetime.now()",
+        "detail": "tour_management.views",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "manage",
+        "description": "manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault(\"DJANGO_SETTINGS_MODULE\", \"Django_for_tour.settings\")\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "manage",
+        "documentation": {}
+    }
+]
