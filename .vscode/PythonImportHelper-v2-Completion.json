@@ -73,11 +73,20 @@
         "documentation": {}
     },
     {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
+        "label": "django.db.models.deletion",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "django.apps",
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
         "documentation": {}
     },
     {
@@ -86,6 +95,22 @@
         "description": "django.db",
         "isExtraImport": true,
         "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
         "documentation": {}
     },
     {
@@ -115,6 +140,14 @@
     },
     {
         "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
         "importPath": "django.http",
         "description": "django.http",
         "isExtraImport": true,
@@ -311,6 +344,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "tour_management.migrations.0001_initial",
+        "description": "tour_management.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = []\n    operations = [\n        migrations.CreateModel(\n            name=\"Booking\",\n            fields=[\n                (\n                    \"id\",\n                    models.BigAutoField(",
+        "detail": "tour_management.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
         "label": "TourManagementConfig",
         "kind": 6,
         "importPath": "tour_management.apps",
@@ -369,16 +411,7 @@
         "kind": 6,
         "importPath": "tour_management.models",
         "description": "tour_management.models",
-        "peekOfCode": "class TourPackagePricing(models.Model):\n    tour_package = models.ForeignKey(\"TourPackage\", on_delete=models.CASCADE)\n    season = models.ForeignKey(\"Season\", on_delete=models.CASCADE)\n    price_tier = models.CharField(max_length=255)\n    price = models.DecimalField(max_digits=10, decimal_places=2)\n    profit_margin_type = models.CharField(max_length=255)  # Percentage or fixed amount\n    profit_margin_value = models.DecimalField(max_digits=10, decimal_places=2)\nclass Tour(models.Model):\n    tour_name = models.CharField(max_length=50)\n    description = models.CharField()",
-        "detail": "tour_management.models",
-        "documentation": {}
-    },
-    {
-        "label": "Tour",
-        "kind": 6,
-        "importPath": "tour_management.models",
-        "description": "tour_management.models",
-        "peekOfCode": "class Tour(models.Model):\n    tour_name = models.CharField(max_length=50)\n    description = models.CharField()\n    itinerary = models.CharField()",
+        "peekOfCode": "class TourPackagePricing(models.Model):\n    tour_package = models.ForeignKey(\"TourPackage\", on_delete=models.CASCADE)\n    season = models.ForeignKey(\"Season\", on_delete=models.CASCADE)\n    price_tier = models.CharField(max_length=255)\n    price = models.DecimalField(max_digits=10, decimal_places=2)\n    profit_margin_type = models.CharField(max_length=255)  # Percentage or fixed amount\n    profit_margin_value = models.DecimalField(max_digits=10, decimal_places=2)",
         "detail": "tour_management.models",
         "documentation": {}
     },
@@ -387,7 +420,7 @@
         "kind": 5,
         "importPath": "tour_management.urls",
         "description": "tour_management.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"\", views.index, name=\"index\")\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"\", views.index, name=\"index\"),\n    # path(\"/booking\", views.booking, name=\"booking\"),\n    path(\"season\", views.season, name=\"season\"),\n]",
         "detail": "tour_management.urls",
         "documentation": {}
     },
@@ -396,16 +429,16 @@
         "kind": 2,
         "importPath": "tour_management.views",
         "description": "tour_management.views",
-        "peekOfCode": "def index(request):\n    return HttpResponse(\"Hello! Welcome! Hello world!\")\ndef booking(request):\n    if request.method == \"POST\":\n        # Extract supplier ID from form data\n        supplier_id = request.POST[\"supplier\"]\n        # Get the selected supplier\n        supplier = Supplier.objects.get(pk=supplier_id)\n        # Get tours for the selected supplier\n        tours = Tour.objects.filter(supplier=supplier)",
+        "peekOfCode": "def index(request):\n    return HttpResponse(request.method)\n# def booking(request):\n#     if request.method == \"POST\":\n#         # Extract supplier ID from form data\n#         supplier_id = request.POST[\"supplier\"]\n#         # Get the selected supplier\n#         supplier = Supplier.objects.get(pk=supplier_id)\n#         # Get tours for the selected supplier\n#         tours = TourPackage.objects.filter(supplier=supplier)",
         "detail": "tour_management.views",
         "documentation": {}
     },
     {
-        "label": "booking",
+        "label": "season",
         "kind": 2,
         "importPath": "tour_management.views",
         "description": "tour_management.views",
-        "peekOfCode": "def booking(request):\n    if request.method == \"POST\":\n        # Extract supplier ID from form data\n        supplier_id = request.POST[\"supplier\"]\n        # Get the selected supplier\n        supplier = Supplier.objects.get(pk=supplier_id)\n        # Get tours for the selected supplier\n        tours = Tour.objects.filter(supplier=supplier)\n        # Filter tours based on booking date\n        booking_date = datetime.now()",
+        "peekOfCode": "def season(request):\n    print(request.method)\n    if request.method == \"POST\":\n        ss = Season()\n        ss.season_name = request.POST[\"season_name\"]\n        ss.start_date = request.POST[\"start_date\"]\n        ss.end_date = request.POST[\"end_date\"]\n        ss.save()\n        return JsonResponse({\"success\": \"HELLO!\", \"season\": ss})",
         "detail": "tour_management.views",
         "documentation": {}
     },
