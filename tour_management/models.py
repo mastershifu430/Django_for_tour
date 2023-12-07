@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractUser
+from django.utils import timezone
 
 
 class Tourtype(models.TextChoices):
@@ -22,31 +23,7 @@ class Status(models.TextChoices):
     REFUNDED = "refunded"
 
 
-class CustomUserManager(BaseUserManager):
-    def create_user(self, email, password, **extra_fields):
-        if not email:
-            raise ValueError(_("The Email must be set"))
-        email = self.normalize_email(email)
-        user = self.model(email=email, **extra_fields)
-        user.set_password(password)
-        user.save()
-        return user
-
-    def create_superuser(self, email, password, **extra_fields):
-        extra_fields.setdefault("is_staff", True)
-        extra_fields.setdefault("is_superuser", True)
-        extra_fields.setdefault("is_active", True)
-        extra_fields.setdefault("is_admin", True)
-        extra_fields.setdefault("role", "admin")
-
-        if extra_fields.get("is_staff") is not True:
-            raise ValueError(_("Superuser must have is_staff=True."))
-        if extra_fields.get("is_superuser") is not True:
-            raise ValueError(_("Superuser must have is_superuser=True."))
-        return self.create_user(email, password, **extra_fields)
-
-
-class CustomUser(AbstractUser):
+class CustomUser(models.Model):
     class Roles(models.TextChoices):
         ADMIN = "admin"
         SUB_ADMIN = "sub_admin"
@@ -55,24 +32,19 @@ class CustomUser(AbstractUser):
         REPRESENTATIVE = "representative"
         CUSTOMER = "customer"
 
-    username = None
-    name = models.CharField(max_length=40, null=True)
-    email = models.EmailField(_("Email address"), unique=True)
-    role = models.CharField(max_length=8, choices=Roles.choices, default=Roles.CUSTOMER)
+    first_name = models.CharField(max_length=20, null=True)
+    last_name = models.CharField(max_length=20, null=True)
+    email = models.EmailField(max_length=254)
+    password = models.CharField(max_length=254)
+    role = models.CharField(
+        max_length=20, choices=Roles.choices, default=Roles.CUSTOMER
+    )
     is_active = models.BooleanField(default=True)
-    is_admin = models.BooleanField(default=False)
-    is_staff = models.BooleanField(default=False)
-    is_superuser = models.BooleanField(default=False)
 
-    contact_information = models.JSONField()
-    travel_preferences = models.JSONField()
-    travel_history = models.TextField()
-    preferred_language = models.CharField(max_length=255)
-
-    USERNAME_FIELD = "email"
-    REQUIRED_FIELDS = []
-
-    objects = CustomUserManager()
+    contact_information = models.JSONField(null=True)
+    travel_preferences = models.JSONField(null=True)
+    travel_history = models.TextField(null=True)
+    prefered_language = models.CharField(max_length=255)
 
     def __str__(self):
         return self.email
@@ -94,17 +66,29 @@ class Booking(models.Model):
     customer_name = models.CharField(max_length=20)
     customer_last_name = models.CharField(max_length=20)
     contact_information = models.JSONField()
-    date_time = models.DateTimeField()
+    date_time = models.DateTimeField(default=timezone.now)
     payer = models.CharField(
         max_length=15, choices=Payer.choices, default=Payer.DIRECT_CLIENT
     )
-    number_of_guests = models.IntegerField()
+    number_of_guests = models.IntegerField(default=0)
     tour_type = models.CharField(
         max_length=20, choices=Tourtype.choices, default=Tourtype.AERIAL
     )
     status = models.CharField(
         max_length=20, choices=Status.choices, default=Status.PENDING
     )
+
+
+class Pricing(models.Model):
+    agency_rate = models.IntegerField(default=0)
+    direct_customer_rate = models.IntegerField(default=0)
+    supplier_cost = models.IntegerField(default=0)
+    profit_margin = models.IntegerField(default=0)
+
+
+class Supplier(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    pricing = models.JSONField()
 
 
 class TourPackage(models.Model):
@@ -116,7 +100,7 @@ class TourPackage(models.Model):
     excluded = models.TextField()
     remarks = models.TextField()
     pricing = models.JSONField()  # Pricing structure based on tour package and season
-    supplier = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    supplier = models.ForeignKey(Supplier, on_delete=models.CASCADE)
     availability = models.JSONField()  # Availability by date, tour type, and supplier
 
 
@@ -149,19 +133,16 @@ class TourSchedule(models.Model):
 
 
 class Message(models.Model):
-    sender = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
-    recipient = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    sender = models.ForeignKey(
+        CustomUser, on_delete=models.CASCADE, related_name="sent_messages"
+    )
+    recipient = models.ForeignKey(
+        CustomUser, on_delete=models.CASCADE, related_name="received_messages"
+    )
     message_content = models.TextField()
     payer = models.CharField(
         max_length=15, choices=Payer.choices, default=Payer.DIRECT_CLIENT
     )
-
-
-class Pricing(models.Model):
-    agency_rate = models.IntegerField()
-    direct_customer_rate = models.IntegerField()
-    supplier_cost = models.IntegerField()
-    profit_margin = models.IntegerField()
 
 
 class PaymentInfo(models.Model):
@@ -173,11 +154,6 @@ class Client(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     information = models.TextField()
     special_request = models.TextField()
-
-
-class Supplier(models.Model):
-    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
-    pricing = models.ForeignKey(Pricing, on_delete=models.CASCADE)
 
 
 class CommissionAgreement(models.Model):

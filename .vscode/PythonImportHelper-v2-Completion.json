@@ -82,6 +82,87 @@
         "documentation": {}
     },
     {
+        "label": "django.db",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db",
+        "description": "django.db",
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
@@ -106,11 +187,69 @@
         "documentation": {}
     },
     {
+        "label": "django.utils.timezone",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
         "label": "AppConfig",
         "importPath": "django.apps",
         "description": "django.apps",
         "isExtraImport": true,
         "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "BaseUserManager",
+        "importPath": "django.contrib.auth.base_user",
+        "description": "django.contrib.auth.base_user",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.base_user",
+        "documentation": {}
+    },
+    {
+        "label": "AbstractUser",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
+        "label": "rest_framework",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
         "documentation": {}
     },
     {
@@ -139,15 +278,39 @@
         "documentation": {}
     },
     {
-        "label": "HttpResponse",
-        "importPath": "django.http",
-        "description": "django.http",
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
         "isExtraImport": true,
-        "detail": "django.http",
+        "detail": "rest_framework.views",
         "documentation": {}
     },
     {
-        "label": "JsonResponse",
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "HTTP_200_OK",
+        "importPath": "rest_framework.status",
+        "description": "rest_framework.status",
+        "isExtraImport": true,
+        "detail": "rest_framework.status",
+        "documentation": {}
+    },
+    {
+        "label": "HTTP_400_BAD_REQUEST",
+        "importPath": "rest_framework.status",
+        "description": "rest_framework.status",
+        "isExtraImport": true,
+        "detail": "rest_framework.status",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
         "importPath": "django.http",
         "description": "django.http",
         "isExtraImport": true,
@@ -330,7 +493,7 @@
         "kind": 5,
         "importPath": "Django_for_tour.urls",
         "description": "Django_for_tour.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"tour_api/\", include(\"tour_management.urls\"))\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"\", include(\"tour_management.urls\")),\n]",
         "detail": "Django_for_tour.urls",
         "documentation": {}
     },
@@ -353,6 +516,60 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "tour_management.migrations.0002_auto_20231207_0119",
+        "description": "tour_management.migrations.0002_auto_20231207_0119",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"tour_management\", \"0001_initial\"),\n    ]\n    operations = []",
+        "detail": "tour_management.migrations.0002_auto_20231207_0119",
+        "documentation": {}
+    },
+    {
+        "label": "populate_pricing",
+        "kind": 2,
+        "importPath": "tour_management.migrations.0002_auto_20231207_0119",
+        "description": "tour_management.migrations.0002_auto_20231207_0119",
+        "peekOfCode": "def populate_pricing(apps, schema_editor):\n    Supplier = apps.get_model(\"tour_management\", \"Supplier\")\n    Pricing = apps.get_model(\"tour_management\", \"Pricing\")\n    # Assuming you want to set the default Pricing for existing suppliers\n    default_pricing, created = Pricing.objects.get_or_create(\n        agency_rate=0, direct_customer_rate=0, supplier_cost=0, profit_margin=0\n    )\n    Supplier.objects.filter(pricing=None).update(pricing=default_pricing)\nclass Migration(migrations.Migration):\n    dependencies = [",
+        "detail": "tour_management.migrations.0002_auto_20231207_0119",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "tour_management.migrations.0003_client_commissionagreement_customuser_and_more",
+        "description": "tour_management.migrations.0003_client_commissionagreement_customuser_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"tour_management\", \"0002_auto_20231207_0119\"),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name=\"Client\",\n            fields=[\n                (\n                    \"id\",",
+        "detail": "tour_management.migrations.0003_client_commissionagreement_customuser_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "tour_management.migrations.0004_alter_customuser_contact_information_and_more",
+        "description": "tour_management.migrations.0004_alter_customuser_contact_information_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"tour_management\", \"0003_client_commissionagreement_customuser_and_more\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"customuser\",\n            name=\"contact_information\",\n            field=models.JSONField(null=True),\n        ),",
+        "detail": "tour_management.migrations.0004_alter_customuser_contact_information_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "tour_management.migrations.0005_alter_booking_date_time_and_more",
+        "description": "tour_management.migrations.0005_alter_booking_date_time_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"tour_management\", \"0004_alter_customuser_contact_information_and_more\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"booking\",\n            name=\"date_time\",\n            field=models.DateTimeField(default=django.utils.timezone.now),\n        ),",
+        "detail": "tour_management.migrations.0005_alter_booking_date_time_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "tour_management.migrations.0006_alter_tourpackage_supplier",
+        "description": "tour_management.migrations.0006_alter_tourpackage_supplier",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"tour_management\", \"0005_alter_booking_date_time_and_more\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"tourpackage\",\n            name=\"supplier\",\n            field=models.ForeignKey(\n                on_delete=django.db.models.deletion.CASCADE,",
+        "detail": "tour_management.migrations.0006_alter_tourpackage_supplier",
+        "documentation": {}
+    },
+    {
         "label": "TourManagementConfig",
         "kind": 6,
         "importPath": "tour_management.apps",
@@ -362,20 +579,65 @@
         "documentation": {}
     },
     {
-        "label": "Booking",
+        "label": "Tourtype",
         "kind": 6,
         "importPath": "tour_management.models",
         "description": "tour_management.models",
-        "peekOfCode": "class Booking(models.Model):\n    customer_name = models.CharField(max_length=20)\n    customer_last_name = models.CharField(max_length=20)\n    contact_information = models.JSONField()\n    time = models.DateTimeField()\n    payer = models.CharField(\n        max_length=15,\n        choices=[(\"direct_client\", \"Direct Client\"), (\"agency\", \"Agency\")],\n    )\n    number_of_guests = models.IntegerField()",
+        "peekOfCode": "class Tourtype(models.TextChoices):\n    AERIAL = \"Aerial\"\n    ADVENTURE = \"Adventure\"\n    AQUATIC = \"Aquatic\"\n    COMBINED = \"Combined\"\n    EXTREME = \"Extreme\"\n    NIGHTOUT = \"Nightout\"\n    SIGHTSEEING = \"Sightseeing\"\n    TERRESTRIAL = \"Terrestrial\"\nclass Status(models.TextChoices):",
         "detail": "tour_management.models",
         "documentation": {}
     },
     {
-        "label": "Customer",
+        "label": "Status",
         "kind": 6,
         "importPath": "tour_management.models",
         "description": "tour_management.models",
-        "peekOfCode": "class Customer(models.Model):\n    name = models.CharField(max_length=255)\n    contact_information = models.JSONField()\n    travel_preferences = models.JSONField()\n    travel_history = models.TextField()\n    preferred_language = models.CharField(max_length=255)\nclass Supplier(models.Model):\n    name = models.CharField(max_length=255)\n    contact_person_name = models.CharField(max_length=255)\n    contact_person_last_name = models.CharField(max_length=255)",
+        "peekOfCode": "class Status(models.TextChoices):\n    PENDING = \"pending\"\n    CONFIRMED = \"confirmed\"\n    COMPLETED = \"completed\"\n    CANCELED = \"canceled\"\n    REFUNDED = \"refunded\"\nclass CustomUser(models.Model):\n    class Roles(models.TextChoices):\n        ADMIN = \"admin\"\n        SUB_ADMIN = \"sub_admin\"",
+        "detail": "tour_management.models",
+        "documentation": {}
+    },
+    {
+        "label": "CustomUser",
+        "kind": 6,
+        "importPath": "tour_management.models",
+        "description": "tour_management.models",
+        "peekOfCode": "class CustomUser(models.Model):\n    class Roles(models.TextChoices):\n        ADMIN = \"admin\"\n        SUB_ADMIN = \"sub_admin\"\n        AGENCY = \"agency\"\n        SUPPLIER = \"supplier\"\n        REPRESENTATIVE = \"representative\"\n        CUSTOMER = \"customer\"\n    first_name = models.CharField(max_length=20, null=True)\n    last_name = models.CharField(max_length=20, null=True)",
+        "detail": "tour_management.models",
+        "documentation": {}
+    },
+    {
+        "label": "OnlineUser",
+        "kind": 6,
+        "importPath": "tour_management.models",
+        "description": "tour_management.models",
+        "peekOfCode": "class OnlineUser(models.Model):\n    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)\n    def __str__(self):\n        return self.user.name\nclass Payer(models.TextChoices):\n    DIRECT_CLIENT = \"direct_client\"\n    AGENCY = \"agency\"\nclass Booking(models.Model):\n    customer_name = models.CharField(max_length=20)\n    customer_last_name = models.CharField(max_length=20)",
+        "detail": "tour_management.models",
+        "documentation": {}
+    },
+    {
+        "label": "Payer",
+        "kind": 6,
+        "importPath": "tour_management.models",
+        "description": "tour_management.models",
+        "peekOfCode": "class Payer(models.TextChoices):\n    DIRECT_CLIENT = \"direct_client\"\n    AGENCY = \"agency\"\nclass Booking(models.Model):\n    customer_name = models.CharField(max_length=20)\n    customer_last_name = models.CharField(max_length=20)\n    contact_information = models.JSONField()\n    date_time = models.DateTimeField(default=timezone.now)\n    payer = models.CharField(\n        max_length=15, choices=Payer.choices, default=Payer.DIRECT_CLIENT",
+        "detail": "tour_management.models",
+        "documentation": {}
+    },
+    {
+        "label": "Booking",
+        "kind": 6,
+        "importPath": "tour_management.models",
+        "description": "tour_management.models",
+        "peekOfCode": "class Booking(models.Model):\n    customer_name = models.CharField(max_length=20)\n    customer_last_name = models.CharField(max_length=20)\n    contact_information = models.JSONField()\n    date_time = models.DateTimeField(default=timezone.now)\n    payer = models.CharField(\n        max_length=15, choices=Payer.choices, default=Payer.DIRECT_CLIENT\n    )\n    number_of_guests = models.IntegerField(default=0)\n    tour_type = models.CharField(",
+        "detail": "tour_management.models",
+        "documentation": {}
+    },
+    {
+        "label": "Pricing",
+        "kind": 6,
+        "importPath": "tour_management.models",
+        "description": "tour_management.models",
+        "peekOfCode": "class Pricing(models.Model):\n    agency_rate = models.IntegerField(default=0)\n    direct_customer_rate = models.IntegerField(default=0)\n    supplier_cost = models.IntegerField(default=0)\n    profit_margin = models.IntegerField(default=0)\nclass Supplier(models.Model):\n    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)\n    pricing = models.JSONField()\nclass TourPackage(models.Model):\n    tour_name = models.CharField(max_length=255)",
         "detail": "tour_management.models",
         "documentation": {}
     },
@@ -384,7 +646,7 @@
         "kind": 6,
         "importPath": "tour_management.models",
         "description": "tour_management.models",
-        "peekOfCode": "class Supplier(models.Model):\n    name = models.CharField(max_length=255)\n    contact_person_name = models.CharField(max_length=255)\n    contact_person_last_name = models.CharField(max_length=255)\n    email_address = models.EmailField()\n    contact_information = models.JSONField()\n    preferred_languages = models.CharField(max_length=255)\nclass TourPackage(models.Model):\n    tour_name = models.CharField(max_length=255)\n    description = models.TextField()",
+        "peekOfCode": "class Supplier(models.Model):\n    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)\n    pricing = models.JSONField()\nclass TourPackage(models.Model):\n    tour_name = models.CharField(max_length=255)\n    description = models.TextField()\n    itinerary = models.TextField()\n    duration = models.IntegerField()\n    included = models.TextField()\n    excluded = models.TextField()",
         "detail": "tour_management.models",
         "documentation": {}
     },
@@ -393,7 +655,7 @@
         "kind": 6,
         "importPath": "tour_management.models",
         "description": "tour_management.models",
-        "peekOfCode": "class TourPackage(models.Model):\n    tour_name = models.CharField(max_length=255)\n    description = models.TextField()\n    itinerary = models.TextField()\n    duration = models.IntegerField()\n    included = models.TextField()\n    excluded = models.TextField()\n    remarks = models.TextField()\n    pricing = models.JSONField()  # Pricing structure based on tour package and season\n    supplier = models.ForeignKey(\"Supplier\", on_delete=models.CASCADE)",
+        "peekOfCode": "class TourPackage(models.Model):\n    tour_name = models.CharField(max_length=255)\n    description = models.TextField()\n    itinerary = models.TextField()\n    duration = models.IntegerField()\n    included = models.TextField()\n    excluded = models.TextField()\n    remarks = models.TextField()\n    pricing = models.JSONField()  # Pricing structure based on tour package and season\n    supplier = models.ForeignKey(Supplier, on_delete=models.CASCADE)",
         "detail": "tour_management.models",
         "documentation": {}
     },
@@ -402,7 +664,7 @@
         "kind": 6,
         "importPath": "tour_management.models",
         "description": "tour_management.models",
-        "peekOfCode": "class Season(models.Model):\n    season_name = models.CharField(max_length=255)\n    start_date = models.DateField()\n    end_date = models.DateField()\nclass TourPackagePricing(models.Model):\n    tour_package = models.ForeignKey(\"TourPackage\", on_delete=models.CASCADE)\n    season = models.ForeignKey(\"Season\", on_delete=models.CASCADE)\n    price_tier = models.CharField(max_length=255)\n    price = models.DecimalField(max_digits=10, decimal_places=2)\n    profit_margin_type = models.CharField(max_length=255)  # Percentage or fixed amount",
+        "peekOfCode": "class Season(models.Model):\n    season_name = models.CharField(max_length=255)\n    start_date = models.DateField()\n    end_date = models.DateField()\nclass TourPackagePricing(models.Model):\n    tour_package = models.ForeignKey(TourPackage, on_delete=models.CASCADE)\n    season = models.ForeignKey(Season, on_delete=models.CASCADE)\n    price_tier = models.CharField(max_length=255)\n    price = models.DecimalField(max_digits=10, decimal_places=2)\n    profit_margin_type = models.CharField(max_length=255)  # Percentage or fixed amount",
         "detail": "tour_management.models",
         "documentation": {}
     },
@@ -411,8 +673,179 @@
         "kind": 6,
         "importPath": "tour_management.models",
         "description": "tour_management.models",
-        "peekOfCode": "class TourPackagePricing(models.Model):\n    tour_package = models.ForeignKey(\"TourPackage\", on_delete=models.CASCADE)\n    season = models.ForeignKey(\"Season\", on_delete=models.CASCADE)\n    price_tier = models.CharField(max_length=255)\n    price = models.DecimalField(max_digits=10, decimal_places=2)\n    profit_margin_type = models.CharField(max_length=255)  # Percentage or fixed amount\n    profit_margin_value = models.DecimalField(max_digits=10, decimal_places=2)",
+        "peekOfCode": "class TourPackagePricing(models.Model):\n    tour_package = models.ForeignKey(TourPackage, on_delete=models.CASCADE)\n    season = models.ForeignKey(Season, on_delete=models.CASCADE)\n    price_tier = models.CharField(max_length=255)\n    price = models.DecimalField(max_digits=10, decimal_places=2)\n    profit_margin_type = models.CharField(max_length=255)  # Percentage or fixed amount\n    profit_margin_value = models.DecimalField(max_digits=10, decimal_places=2)\nclass TourSchedule(models.Model):\n    date = models.DateField()\n    tour_type = models.CharField(",
         "detail": "tour_management.models",
+        "documentation": {}
+    },
+    {
+        "label": "TourSchedule",
+        "kind": 6,
+        "importPath": "tour_management.models",
+        "description": "tour_management.models",
+        "peekOfCode": "class TourSchedule(models.Model):\n    date = models.DateField()\n    tour_type = models.CharField(\n        max_length=15, choices=Tourtype.choices, default=Tourtype.AERIAL\n    )\n    supplier = models.ForeignKey(CustomUser, on_delete=models.CASCADE)\n    guide_assigned = models.TextField()\n    shift_details = models.TextField()\n    payer = models.CharField(\n        max_length=15, choices=Payer.choices, default=Payer.DIRECT_CLIENT",
+        "detail": "tour_management.models",
+        "documentation": {}
+    },
+    {
+        "label": "Message",
+        "kind": 6,
+        "importPath": "tour_management.models",
+        "description": "tour_management.models",
+        "peekOfCode": "class Message(models.Model):\n    sender = models.ForeignKey(\n        CustomUser, on_delete=models.CASCADE, related_name=\"sent_messages\"\n    )\n    recipient = models.ForeignKey(\n        CustomUser, on_delete=models.CASCADE, related_name=\"received_messages\"\n    )\n    message_content = models.TextField()\n    payer = models.CharField(\n        max_length=15, choices=Payer.choices, default=Payer.DIRECT_CLIENT",
+        "detail": "tour_management.models",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentInfo",
+        "kind": 6,
+        "importPath": "tour_management.models",
+        "description": "tour_management.models",
+        "peekOfCode": "class PaymentInfo(models.Model):\n    method = models.TextField()\n    status = models.TextField()\nclass Client(models.Model):\n    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)\n    information = models.TextField()\n    special_request = models.TextField()\nclass CommissionAgreement(models.Model):\n    commission_rate = models.IntegerField()\n    payment_terms = models.TextField()",
+        "detail": "tour_management.models",
+        "documentation": {}
+    },
+    {
+        "label": "Client",
+        "kind": 6,
+        "importPath": "tour_management.models",
+        "description": "tour_management.models",
+        "peekOfCode": "class Client(models.Model):\n    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)\n    information = models.TextField()\n    special_request = models.TextField()\nclass CommissionAgreement(models.Model):\n    commission_rate = models.IntegerField()\n    payment_terms = models.TextField()\nclass Shift(models.Model):\n    class ShiftOption(models.TextChoices):\n        MORNING = \"morning\"",
+        "detail": "tour_management.models",
+        "documentation": {}
+    },
+    {
+        "label": "CommissionAgreement",
+        "kind": 6,
+        "importPath": "tour_management.models",
+        "description": "tour_management.models",
+        "peekOfCode": "class CommissionAgreement(models.Model):\n    commission_rate = models.IntegerField()\n    payment_terms = models.TextField()\nclass Shift(models.Model):\n    class ShiftOption(models.TextChoices):\n        MORNING = \"morning\"\n        AFTERNOON = \"afternoon\"\n        NIGHT = \"night\"\n    date = models.DateField()\n    tour_package = models.ForeignKey(TourPackage, on_delete=models.CASCADE)",
+        "detail": "tour_management.models",
+        "documentation": {}
+    },
+    {
+        "label": "Shift",
+        "kind": 6,
+        "importPath": "tour_management.models",
+        "description": "tour_management.models",
+        "peekOfCode": "class Shift(models.Model):\n    class ShiftOption(models.TextChoices):\n        MORNING = \"morning\"\n        AFTERNOON = \"afternoon\"\n        NIGHT = \"night\"\n    date = models.DateField()\n    tour_package = models.ForeignKey(TourPackage, on_delete=models.CASCADE)\n    shift_time = models.DateTimeField()\n    shift_option = models.CharField(\n        max_length=15, choices=ShiftOption.choices, default=ShiftOption.MORNING",
+        "detail": "tour_management.models",
+        "documentation": {}
+    },
+    {
+        "label": "GuideAvailability",
+        "kind": 6,
+        "importPath": "tour_management.models",
+        "description": "tour_management.models",
+        "peekOfCode": "class GuideAvailability(models.Model):\n    date_time = models.DateTimeField()\n    preferred_language = models.TextField()\nclass Setting(models.Model):\n    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)\n    interface_language = models.TextField()\n    pickup_list = models.JSONField()\nclass Reports(models.Model):\n    class ReportsType(models.TextChoices):\n        BOOKING = \"booking\"",
+        "detail": "tour_management.models",
+        "documentation": {}
+    },
+    {
+        "label": "Setting",
+        "kind": 6,
+        "importPath": "tour_management.models",
+        "description": "tour_management.models",
+        "peekOfCode": "class Setting(models.Model):\n    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)\n    interface_language = models.TextField()\n    pickup_list = models.JSONField()\nclass Reports(models.Model):\n    class ReportsType(models.TextChoices):\n        BOOKING = \"booking\"\n        SALES = \"sales\"\n        CUSTOMER_ACTIVITY = \"customer_activity\"\n        SUPPLIER_PERFORMANCE = \"supplier_performance\"",
+        "detail": "tour_management.models",
+        "documentation": {}
+    },
+    {
+        "label": "Reports",
+        "kind": 6,
+        "importPath": "tour_management.models",
+        "description": "tour_management.models",
+        "peekOfCode": "class Reports(models.Model):\n    class ReportsType(models.TextChoices):\n        BOOKING = \"booking\"\n        SALES = \"sales\"\n        CUSTOMER_ACTIVITY = \"customer_activity\"\n        SUPPLIER_PERFORMANCE = \"supplier_performance\"\n    report_type = models.CharField(\n        max_length=20, choices=ReportsType.choices, default=ReportsType.BOOKING\n    )\nclass Wallet(models.Model):",
+        "detail": "tour_management.models",
+        "documentation": {}
+    },
+    {
+        "label": "Wallet",
+        "kind": 6,
+        "importPath": "tour_management.models",
+        "description": "tour_management.models",
+        "peekOfCode": "class Wallet(models.Model):\n    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)\n    balance = models.IntegerField()\n    history = models.JSONField()",
+        "detail": "tour_management.models",
+        "documentation": {}
+    },
+    {
+        "label": "SeasonSerializer",
+        "kind": 6,
+        "importPath": "tour_management.serializers",
+        "description": "tour_management.serializers",
+        "peekOfCode": "class SeasonSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Season\n        fields = \"__all__\"\nclass CustomUserSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = CustomUser\n        fields = (\"first_name\", \"last_name\", \"email\", \"password\", \"prefered_language\")\nclass BookingSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "detail": "tour_management.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "CustomUserSerializer",
+        "kind": 6,
+        "importPath": "tour_management.serializers",
+        "description": "tour_management.serializers",
+        "peekOfCode": "class CustomUserSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = CustomUser\n        fields = (\"first_name\", \"last_name\", \"email\", \"password\", \"prefered_language\")\nclass BookingSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Booking\n        fields = \"__all__\"\nclass MessageSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "detail": "tour_management.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "BookingSerializer",
+        "kind": 6,
+        "importPath": "tour_management.serializers",
+        "description": "tour_management.serializers",
+        "peekOfCode": "class BookingSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Booking\n        fields = \"__all__\"\nclass MessageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Message\n        fields = \"__all__\"\nclass ClientSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "detail": "tour_management.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "MessageSerializer",
+        "kind": 6,
+        "importPath": "tour_management.serializers",
+        "description": "tour_management.serializers",
+        "peekOfCode": "class MessageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Message\n        fields = \"__all__\"\nclass ClientSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Client\n        fields = (\"user\", \"information\", \"special_request\")\nclass TourPackageSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "detail": "tour_management.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "ClientSerializer",
+        "kind": 6,
+        "importPath": "tour_management.serializers",
+        "description": "tour_management.serializers",
+        "peekOfCode": "class ClientSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Client\n        fields = (\"user\", \"information\", \"special_request\")\nclass TourPackageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = TourPackage\n        fields = \"__all__\"\nclass SupplierSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "detail": "tour_management.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "TourPackageSerializer",
+        "kind": 6,
+        "importPath": "tour_management.serializers",
+        "description": "tour_management.serializers",
+        "peekOfCode": "class TourPackageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = TourPackage\n        fields = \"__all__\"\nclass SupplierSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Supplier\n        fields = \"__all__\"\nclass ShiftSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "detail": "tour_management.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "SupplierSerializer",
+        "kind": 6,
+        "importPath": "tour_management.serializers",
+        "description": "tour_management.serializers",
+        "peekOfCode": "class SupplierSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Supplier\n        fields = \"__all__\"\nclass ShiftSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Shift\n        fields = \"__all__\"\nclass SettingSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "detail": "tour_management.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "ShiftSerializer",
+        "kind": 6,
+        "importPath": "tour_management.serializers",
+        "description": "tour_management.serializers",
+        "peekOfCode": "class ShiftSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Shift\n        fields = \"__all__\"\nclass SettingSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Setting\n        fields = \"__all__\"",
+        "detail": "tour_management.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "SettingSerializer",
+        "kind": 6,
+        "importPath": "tour_management.serializers",
+        "description": "tour_management.serializers",
+        "peekOfCode": "class SettingSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Setting\n        fields = \"__all__\"",
+        "detail": "tour_management.serializers",
         "documentation": {}
     },
     {
@@ -420,8 +853,89 @@
         "kind": 5,
         "importPath": "tour_management.urls",
         "description": "tour_management.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"\", views.index, name=\"index\"),\n    # path(\"/booking\", views.booking, name=\"booking\"),\n    path(\"season\", views.season, name=\"season\"),\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"\", index, name=\"index\"),\n    path(\"season/\", SeasonView.as_view(), name=\"season\"),\n    path(\"signup/\", Signup.as_view(), name=\"signup\"),\n    path(\"booking/\", BookingView.as_view(), name=\"booking\"),\n    path(\"message/\", MessageView.as_view(), name=\"message\"),\n    path(\"client/\", ClientView.as_view(), name=\"client\"),\n    path(\"tourpackage/\", TourPackageView.as_view(), name=\"tourpackage\"),\n    path(\"shift/\", ShiftView.as_view(), name=\"shift\"),\n    path(\"setting/\", SettingView.as_view(), name=\"setting\"),",
         "detail": "tour_management.urls",
+        "documentation": {}
+    },
+    {
+        "label": "SeasonView",
+        "kind": 6,
+        "importPath": "tour_management.views",
+        "description": "tour_management.views",
+        "peekOfCode": "class SeasonView(APIView):\n    model = Season\n    serializer_class = SeasonSerializer\n    def get(self, request, *arg, **kwargs):\n        seasons = self.model.objects.all()\n        serializers = self.serializer_class(seasons, many=True).data\n        if request.query_params.get(\"id\", None) is not None:\n            season = self.model.objects.get(id=request.query_params.get(\"id\"))\n            serializer = self.serializer_class(season).data\n            return Response(serializer, status=HTTP_200_OK)",
+        "detail": "tour_management.views",
+        "documentation": {}
+    },
+    {
+        "label": "Signup",
+        "kind": 6,
+        "importPath": "tour_management.views",
+        "description": "tour_management.views",
+        "peekOfCode": "class Signup(APIView):\n    def post(self, request, *args, **kwargs):\n        serializer = CustomUserSerializer(data=request.data)\n        if serializer.is_valid():\n            user = CustomUser.objects.create(**serializer.validated_data)\n            user.save()\n            return Response({\"success\": True}, status=HTTP_200_OK)\n        return Response({\"success\": False}, status=HTTP_400_BAD_REQUEST)\nclass BookingView(APIView):\n    model = Booking",
+        "detail": "tour_management.views",
+        "documentation": {}
+    },
+    {
+        "label": "BookingView",
+        "kind": 6,
+        "importPath": "tour_management.views",
+        "description": "tour_management.views",
+        "peekOfCode": "class BookingView(APIView):\n    model = Booking\n    serializer_class = BookingSerializer\n    def get(self, request, *args, **kwargs):\n        bookings = self.model.objects.all()\n        serializers = self.serializer_class(bookings, many=True).data\n        if request.query_params.get(\"id\", None) is not None:\n            booking = self.model.objects.get(id=request.query_params.get(\"id\"))\n            serializer = self.serializer_class(booking).data\n            return Response(serializer, status=HTTP_200_OK)",
+        "detail": "tour_management.views",
+        "documentation": {}
+    },
+    {
+        "label": "MessageView",
+        "kind": 6,
+        "importPath": "tour_management.views",
+        "description": "tour_management.views",
+        "peekOfCode": "class MessageView(APIView):\n    model = Message\n    serializer_class = MessageSerializer\n    def get(self, request, *args, **kwargs):\n        messages = self.model.objects.all()\n        serializers = self.serializer_class(messages, many=True).data\n        if request.query_params.get(\"id\", None) is not None:\n            message = self.model.objects.get(id=request.query_params.get(\"id\"))\n            serializer = self.serializer_class(message).data\n            return Response(serializer, status=HTTP_200_OK)",
+        "detail": "tour_management.views",
+        "documentation": {}
+    },
+    {
+        "label": "ClientView",
+        "kind": 6,
+        "importPath": "tour_management.views",
+        "description": "tour_management.views",
+        "peekOfCode": "class ClientView(APIView):\n    model = Client\n    serializer_class = ClientSerializer\n    def get(self, request, *args, **kwargs):\n        clients = self.model.objects.all()\n        serializers = self.serializer_class(clients, many=True).data\n        if request.query_params.get(\"id\", None) is not None:\n            client = self.model.objects.get(id=request.query_params.get(\"id\"))\n            serializer = self.serializer_class(client).data\n            return Response(serializer, status=HTTP_200_OK)",
+        "detail": "tour_management.views",
+        "documentation": {}
+    },
+    {
+        "label": "TourPackageView",
+        "kind": 6,
+        "importPath": "tour_management.views",
+        "description": "tour_management.views",
+        "peekOfCode": "class TourPackageView(APIView):\n    model = TourPackage\n    serializer_class = TourPackageSerializer\n    def get(self, request, *args, **kwargs):\n        tourpackages = self.model.objects.all()\n        serializers = self.serializer_class(tourpackages, many=True).data\n        if request.query_params.get(\"id\", None) is not None:\n            tourpackage = self.model.objects.get(id=request.query_params.get(\"id\"))\n            serializer = self.serializer_class(tourpackage).data\n            return Response(serializer, status=HTTP_200_OK)",
+        "detail": "tour_management.views",
+        "documentation": {}
+    },
+    {
+        "label": "SupplierView",
+        "kind": 6,
+        "importPath": "tour_management.views",
+        "description": "tour_management.views",
+        "peekOfCode": "class SupplierView(APIView):\n    model = Supplier\n    serializer_class = SupplierSerializer\n    def get(self, request, *args, **kwargs):\n        suppilers = self.model.objects.all()\n        serializers = self.serializer_class(suppilers, many=True).data\n        if request.query_params.get(\"id\", None) is not None:\n            supplier = self.model.objects.get(id=request.query_params.get(\"id\"))\n            serializer = self.serializer_class(supplier).data\n            return Response(serializer, status=HTTP_200_OK)",
+        "detail": "tour_management.views",
+        "documentation": {}
+    },
+    {
+        "label": "ShiftView",
+        "kind": 6,
+        "importPath": "tour_management.views",
+        "description": "tour_management.views",
+        "peekOfCode": "class ShiftView(APIView):\n    model = Shift\n    serializer_class = ShiftSerializer\n    def get(self, request, *args, **kwargs):\n        shifts = self.model.objects.all()\n        serializers = self.serializer_class(shifts, many=True).data\n        if request.query_params.get(\"id\", None) is not None:\n            shift = self.model.objects.get(id=request.query_params.get(\"id\"))\n            serializer = self.serializer_class(shift).data\n            return Response(serializer, status=HTTP_200_OK)",
+        "detail": "tour_management.views",
+        "documentation": {}
+    },
+    {
+        "label": "SettingView",
+        "kind": 6,
+        "importPath": "tour_management.views",
+        "description": "tour_management.views",
+        "peekOfCode": "class SettingView(APIView):\n    model = Setting\n    serializer_class = SettingSerializer\n    def get(self, request, *args, **kwargs):\n        if request.query_params.get(\"id\", None) is not None:\n            setting = self.model.objects.get(id=request.query_params.get(\"id\"))\n            serializer = self.serializer_class(setting).data\n            return Response(serializer, status=HTTP_200_OK)\n    def post(self, request, *arg, **kwargs):\n        if request.query_params.get(\"id\", None) is not None:",
+        "detail": "tour_management.views",
         "documentation": {}
     },
     {
@@ -429,16 +943,7 @@
         "kind": 2,
         "importPath": "tour_management.views",
         "description": "tour_management.views",
-        "peekOfCode": "def index(request):\n    return HttpResponse(request.method)\n# def booking(request):\n#     if request.method == \"POST\":\n#         # Extract supplier ID from form data\n#         supplier_id = request.POST[\"supplier\"]\n#         # Get the selected supplier\n#         supplier = Supplier.objects.get(pk=supplier_id)\n#         # Get tours for the selected supplier\n#         tours = TourPackage.objects.filter(supplier=supplier)",
-        "detail": "tour_management.views",
-        "documentation": {}
-    },
-    {
-        "label": "season",
-        "kind": 2,
-        "importPath": "tour_management.views",
-        "description": "tour_management.views",
-        "peekOfCode": "def season(request):\n    print(request.method)\n    if request.method == \"POST\":\n        ss = Season()\n        ss.season_name = request.POST[\"season_name\"]\n        ss.start_date = request.POST[\"start_date\"]\n        ss.end_date = request.POST[\"end_date\"]\n        ss.save()\n        return JsonResponse({\"success\": \"HELLO!\", \"season\": ss})",
+        "peekOfCode": "def index(request):\n    return Response({\"message\": \"Hello world!\"})\n# def booking(request):\n#     if request.method == \"POST\":\n#         # Extract supplier ID from form data\n#         supplier_id = request.POST[\"supplier\"]\n#         # Get the selected supplier\n#         supplier = Supplier.objects.get(pk=supplier_id)\n#         # Get tours for the selected supplier\n#         tours = TourPackage.objects.filter(supplier=supplier)",
         "detail": "tour_management.views",
         "documentation": {}
     },

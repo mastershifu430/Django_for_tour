@@ -1,5 +1,7 @@
 import datetime
+import django.db
 from django.shortcuts import render
+import rest_framework
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.status import HTTP_200_OK, HTTP_400_BAD_REQUEST
@@ -112,22 +114,200 @@ class SeasonView(APIView):
             season = self.model.objects.create(**seasonserializer.validated_data)
             season.save()
             return Response({"success": True, "season": seasonserializer.data})
+        return Response({"success": False}, status=HTTP_400_BAD_REQUEST)
 
 
 class Signup(APIView):
     def post(self, request, *args, **kwargs):
         serializer = CustomUserSerializer(data=request.data)
         if serializer.is_valid():
-            role = serializer.data.get("role")
-            if role == "admin":
-                user = get_user_model().objects.create_super_user(
-                    **serializer.validated_data
-                )
-                user.save()
-            else:
-                user = get_user_model().objects.create_user(**serializer.validated_data)
-                user.save()
-                if role == "suppiler":
-                    Supplier.objects.create(user=user)
+            user = CustomUser.objects.create(**serializer.validated_data)
+            user.save()
+            return Response({"success": True}, status=HTTP_200_OK)
+        return Response({"success": False}, status=HTTP_400_BAD_REQUEST)
+
+
+class BookingView(APIView):
+    model = Booking
+    serializer_class = BookingSerializer
+
+    def get(self, request, *args, **kwargs):
+        bookings = self.model.objects.all()
+        serializers = self.serializer_class(bookings, many=True).data
+        if request.query_params.get("id", None) is not None:
+            booking = self.model.objects.get(id=request.query_params.get("id"))
+            serializer = self.serializer_class(booking).data
+            return Response(serializer, status=HTTP_200_OK)
+        return Response(serializers, status=HTTP_200_OK)
+
+    def post(self, request, *args, **kwargs):
+        if request.query_params.get("id", None) is not None:
+            booking = self.model.objects.get(id=request.query_params.get("id"))
+            if request.data.get("status", None) is not None:
+                booking.status = request.data.get("status")
+            if request.data.get("tour_type", None) is not None:
+                booking.tour_type = request.data.get("tour_type")
+            if request.data.get("number_of_guests", None) is not None:
+                booking.number_of_guests = request.data.get("number_of_guests")
+            if request.data.get("date_time", None) is not None:
+                booking.date_time = request.data.get("date_time")
+            if request.data.get("contact_infomation", None) is not None:
+                booking.contact_infomation = request.data.get("contact_infomation")
+            booking.save()
+            return Response({"success": True})
+
+        serializer = self.serializer_class(data=request.data)
+        if serializer.is_valid():
+            booking = self.model.objects.create(**serializer.validated_data)
+            booking.save()
+            return Response({"success": True}, status=HTTP_200_OK)
+        return Response({"success": False}, status=HTTP_400_BAD_REQUEST)
+
+
+class MessageView(APIView):
+    model = Message
+    serializer_class = MessageSerializer
+
+    def get(self, request, *args, **kwargs):
+        messages = self.model.objects.all()
+        serializers = self.serializer_class(messages, many=True).data
+        if request.query_params.get("id", None) is not None:
+            message = self.model.objects.get(id=request.query_params.get("id"))
+            serializer = self.serializer_class(message).data
+            return Response(serializer, status=HTTP_200_OK)
+        return Response(serializers, status=HTTP_200_OK)
+
+    def delete(self, request, *args, **kwargs):
+        if request.query_params.get("id", None) is not None:
+            try:
+                message = self.model.objects.get(id=request.query_params.get("id"))
+            except self.model.DoesNotExist:
+                return Response({"success": False}, status=HTTP_400_BAD_REQUEST)
+            message.delete()
+            return Response({"success": True})
+        return Response({"success": False}, status=HTTP_400_BAD_REQUEST)
+
+    def post(self, request, *args, **kwargs):
+        messageserializer = self.serializer_class(data=request.data)
+        if messageserializer.is_valid():
+            message = self.model.objects.create(**messageserializer.validated_data)
+            message.save()
+            return Response({"success": True, "message": messageserializer.data})
+        return Response({"success": False}, status=HTTP_400_BAD_REQUEST)
+
+
+class ClientView(APIView):
+    model = Client
+    serializer_class = ClientSerializer
+
+    def get(self, request, *args, **kwargs):
+        clients = self.model.objects.all()
+        serializers = self.serializer_class(clients, many=True).data
+        if request.query_params.get("id", None) is not None:
+            client = self.model.objects.get(id=request.query_params.get("id"))
+            serializer = self.serializer_class(client).data
+            return Response(serializer, status=HTTP_200_OK)
+        return Response(serializers, status=HTTP_200_OK)
+
+    def post(self, request, *args, **kwargs):
+        serializer = self.serializer_class(data=request.data)
+        if serializer.is_valid():
+            client = self.model.create(**serializer.validated_data)
+            client.save()
+            return Response({"success": True}, status=HTTP_200_OK)
+        return Response({"success": False}, status=HTTP_400_BAD_REQUEST)
+
+
+class TourPackageView(APIView):
+    model = TourPackage
+    serializer_class = TourPackageSerializer
+
+    def get(self, request, *args, **kwargs):
+        tourpackages = self.model.objects.all()
+        serializers = self.serializer_class(tourpackages, many=True).data
+        if request.query_params.get("id", None) is not None:
+            tourpackage = self.model.objects.get(id=request.query_params.get("id"))
+            serializer = self.serializer_class(tourpackage).data
+            return Response(serializer, status=HTTP_200_OK)
+        return Response(serializers, status=HTTP_200_OK)
+
+    def post(self, request, *args, **kwargs):
+        serializer = self.serializer_class(data=request.data)
+        if serializer.is_valid():
+            tourpackage = self.model.create(**serializer.validated_data)
+            tourpackage.save()
+            return Response({"success": True}, status=HTTP_200_OK)
+        return Response({"success": False}, status=HTTP_400_BAD_REQUEST)
+
+
+class SupplierView(APIView):
+    model = Supplier
+    serializer_class = SupplierSerializer
+
+    def get(self, request, *args, **kwargs):
+        suppilers = self.model.objects.all()
+        serializers = self.serializer_class(suppilers, many=True).data
+        if request.query_params.get("id", None) is not None:
+            supplier = self.model.objects.get(id=request.query_params.get("id"))
+            serializer = self.serializer_class(supplier).data
+            return Response(serializer, status=HTTP_200_OK)
+        return Response(serializers, status=HTTP_200_OK)
+
+    def post(self, request, *args, **kwargs):
+        serializer = self.serializer_class(data=request.data)
+        if serializer.is_valid():
+            supplier = self.model.create(**serializer.validated_data)
+            supplier.save()
+            return Response({"success": True}, status=HTTP_200_OK)
+        return Response({"success": False}, status=HTTP_400_BAD_REQUEST)
+
+
+class ShiftView(APIView):
+    model = Shift
+    serializer_class = ShiftSerializer
+
+    def get(self, request, *args, **kwargs):
+        shifts = self.model.objects.all()
+        serializers = self.serializer_class(shifts, many=True).data
+        if request.query_params.get("id", None) is not None:
+            shift = self.model.objects.get(id=request.query_params.get("id"))
+            serializer = self.serializer_class(shift).data
+            return Response(serializer, status=HTTP_200_OK)
+        return Response(serializers, status=HTTP_200_OK)
+
+    def post(self, request, *args, **kwargs):
+        serializer = self.serializer_class(data=request.data)
+        if serializer.is_valid():
+            shift = self.model.create(**serializer.validated_data)
+            shift.save()
+            return Response({"success": True}, status=HTTP_200_OK)
+        return Response({"success": False}, status=HTTP_400_BAD_REQUEST)
+    
+class SettingView(APIView):
+    model = Setting
+    serializer_class = SettingSerializer
+    
+    def get(self, request, *args, **kwargs):
+        if request.query_params.get("id", None) is not None:
+            setting = self.model.objects.get(id=request.query_params.get("id"))
+            serializer = self.serializer_class(setting).data
+            return Response(serializer, status=HTTP_200_OK)
+    
+    def post(self, request, *arg, **kwargs):
+        if request.query_params.get("id", None) is not None:
+            setting = self.model.objects.get(id=request.query_params.get("id"))
+            if request.data.get("user", None) is not None:
+                setting.user = request.data.get("user")
+            if request.data.get("interface_language", None) is not None:
+                setting.interface_language = request.data.get("interface_language")
+            if request.data.get("pickup_list", None) is not None:
+                setting.pickup_list = request.data.get("pickup_list")
+            setting.save()
+            return Response({"success": True})
+
+        seasonserializer = self.serializer_class(data=request.data)
+        if seasonserializer.is_valid():
+            setting = self.model.objects.create(**seasonserializer.validated_data)
+            setting.save()
             return Response({"success": True}, status=HTTP_200_OK)
         return Response({"success": False}, status=HTTP_400_BAD_REQUEST)
